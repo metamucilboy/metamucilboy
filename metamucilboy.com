@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Metamucil Boy</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>METAMUCIL BOY</h1>
+
+<p>I was born in 1987 and I have genetically high cholesterol, so I drink Metamucil.
+<p>
+I like to draw.
+<p>
+In 2026 I printed, assembled, and distributed about 30 copies of my first zine, titled 'BOTTOMLESS BOULEVARD'. 
+<p>
+I created this website so that you can view it, cover to cover, on your computer or cell phone.
+<p>
+I'm excited to design more zines soon.<br>
+<p><br>
+If you'd like to purchase one for $10, or just say hi, please email me: 
+<p>
+<p><p>
+<p>
+metamucilboy@metamucilboy.com
+<p>
+also my instagram and tiktok usernames are both @metamucilboy<br> 
+<p><br>
+<p><p>
+<p>
+Thanks for visiting,
+<p>
+Sincerely,<br>
+<br>
+Jonathan Loja<br>
+<p><br>
+<p><p>
+<p>
+
+
+</body>
+
+</html>
+body{
+background-color: black;
+color: white;
+font-size: 20px;
+font-family: Times New Roman, serif;
+}
