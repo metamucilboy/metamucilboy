@@ -4,3 +4,14 @@ color: white;
 font-size: 70px;
 font-family: Times New Roman, serif;
 }
+
+.menu{
+  position: fixed;
+  left: 40px;
+  top: 40px;
+}
+
+.menu a{
+  margin-left: 250px;
+  padding: 40px;
+}
