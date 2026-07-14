@@ -2,86 +2,124 @@
 <html>
 
 <head>
-  
-<title>INFO</title>
+  <meta charset="UTF-8">
 
-<style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFO</title>
 
-body{
-  background-color: black;
-  color: white;
-  fint-family: "Times New Roman", serif;
-  margin: 0;
-}
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: "Times New Roman", serif;
+      margin: 0;
+      padding: 20px;
+    }
 
-.menu{
-  position: fixed;
-  left: 20px;
-  top: 20px;
-  width: 180px;
-}
+    .menu-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 10px;
+    }
 
-.menu a{ 
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+    .bar {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 6px 0;
+      background-color: white;
+      transition: 0.4s;
+    }
 
-.content{
-  margin-left: 220px;
-  padding: 20px;
-}
+    .menu-panel {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background-color: #111;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+      transition: 0.4s;
+      z-index: 99;
+      padding-top: 80px;
+    }
 
-.content p {
-  font-size: 28px;
-  line-height: 1.5;
-}
+    .menu-panel.open {
+      right: 0;
+    }
 
-</style>
+    .menu-panel a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 15px 30px;
+      border-bottom: 1px solid #222;
+    }
 
+    .content {
+      margin-top: 60px;
+      max-width: 600px;
+    }
+
+    .content p {
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .open .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .open .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .open .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-6px, -6px);
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="menu">
+  <button class="menu-button" onclick="toggleMenu(this)">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-  <a href="info.html">INFO</a>
+  <div class="menu-panel" id="mobileMenu">
+    <a href="info.html">HOME</a>
+    <a href="bottomless.html">BOTTOMLESS BOULEVARD</a>
+  </div>
 
-  bottomless.htmlBOTTOMLESS
-BOULEVARD</a>
+  <div class="content">
+    <p>I have genetically high cholesterol, so I drink a lot of Metamucil.</p>
+    <p>I like to draw.</p>
+    <p>I created this website so that you can view my zines, cover to cover, on your cell phone.</p>
+    
+    <p>
+      email: metamucilboy@metamucilboy.com<br>
+      instagram and tiktok usernames are both @metamucilboy
+    </p>
+    
+    <p>Thanks,</p>
+    <p>Jonathan</p>
+  </div>
 
-</div>
-
-<div class="content">
-
-<p>
-I have genetically high cholesterol, so I drink a lot of Metamucil.
-<p>
-
-<p>
-I like to draw.
-<p>
-
-<p>
-I created this website so that you can view my zines, cover to cover, on your cell phone.
-<p>
-
-email: metamucilboy@metamucilboy.com
-<p>
-instagram and tiktok usernames are both @metamucilboy<br> 
-<p>
-
-<p>
-Thanks,
-<p>
-
-<p>
-Jonathan
-<p>
-
-</div>
+  <script>
+    function toggleMenu(button) {
+      button.classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
 
 </body>
 
