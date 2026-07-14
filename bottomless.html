@@ -2,117 +2,139 @@
 <html>
 
 <head>
-<title>Bottomless Boulevard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottomless Boulevard</title>
 
-<style>
+  <style>
+    body {
+      background: black;
+      color: white;
+      margin: 0;
+      font-family: "Times New Roman", serif;
+    }
 
-body{
-  background: black;
-  color: white;
-  margin: 0;
-}
+    img {
+      width: 100%;
+      display: block;
+    }
 
-  img{
-    width: 100%;
-    display: block;
-  }
+    .content-wrapper {
+      margin-top: 70px;
+    }
 
-</style>
+    .menu-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 10px;
+    }
 
+    .bar {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 6px 0;
+      background-color: white;
+      transition: 0.4s;
+    }
+
+    .menu-panel {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100%;
+      background-color: #111;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+      transition: 0.4s;
+      z-index: 99;
+      padding-top: 80px;
+    }
+
+    .menu-panel.open {
+      right: 0;
+    }
+
+    .menu-panel a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 15px 25px;
+      border-bottom: 1px solid #222;
+      font-family: "Times New Roman", serif;
+    }
+
+    .open .bar:nth-child(1) { transform: rotate(-45deg) translate(-6px, 6px); }
+    .open .bar:nth-child(2) { opacity: 0; }
+    .open .bar:nth-child(3) { transform: rotate(45deg) translate(-6px, -6px); }
+  </style>
 </head>
 
 <body>
 
-<img src=zines/BB_overview_1.jpeg>
+  <button class="menu-button" onclick="toggleMenu(this)">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-<img src=zines/BB_overview_2.jpeg>
+  <div class="menu-panel" id="mobileMenu">
+    <a href="info.html">HOME</a>
+    <a href="bottomless.html">BOTTOMLESS BOULEVARD</a>
+    <a href="god-devil.html">GOD, the DEVIL, and YOU</a>
+    <a href="domestic.html">DOMESTIC ISSUES</a>
+    <a href="pounds.html">POUNDS PER SQUARE INCH</a>
+    <a href="tshirts.html">T SHIRTS</a>
+  </div>
 
-<img src=zines/BB_overview_3.jpeg>
+  <div class="content-wrapper">
+    <img src="zines/BB_overview_1.jpeg">
+    <img src="zines/BB_overview_2.jpeg">
+    <img src="zines/BB_overview_3.jpeg">
+  </div>
 
-<div style="text-align: center; margin: 30px 0;">
-  <a href="zines/BB_1_10.pdf" target="_blank" style="
-    display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px 30px;
-    font-family: sans-serif;
-    font-size: 56px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  ">
-    view pg's 1 - 10 
-  </a>
-</div>
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="zines/BB_1_10.pdf" target="_blank" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 15px 30px; font-family: sans-serif; font-size: 56px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      view pg's 1 - 10 
+    </a>
+  </div>
 
-<div style="text-align: center; margin: 30px 0;">
-  <a href="zines/BB_11_20.pdf" target="_blank" style="
-    display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px 30px;
-    font-family: sans-serif;
-    font-size: 56px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  ">
-    view pg's 11 - 20 
-  </a>
-</div>
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="zines/BB_11_20.pdf" target="_blank" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 15px 30px; font-family: sans-serif; font-size: 56px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      view pg's 11 - 20 
+    </a>
+  </div>
 
-<div style="text-align: center; margin: 30px 0;">
-  <a href="zines/BB_21_30.pdf" target="_blank" style="
-    display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px 30px;
-    font-family: sans-serif;
-    font-size: 56px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  ">
-    view pg's 21 - 30 
-  </a>
-</div>
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="zines/BB_21_30.pdf" target="_blank" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 15px 30px; font-family: sans-serif; font-size: 56px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      view pg's 21 - 30 
+    </a>
+  </div>
 
-<div style="text-align: center; margin: 30px 0;">
-  <a href="zines/BB_31_40.pdf" target="_blank" style="
-    display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px 30px;
-    font-family: sans-serif;
-    font-size: 56px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  ">
-    view pg's 31 - 40 
-  </a>
-</div>
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="zines/BB_31_40.pdf" target="_blank" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 15px 30px; font-family: sans-serif; font-size: 56px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      view pg's 31 - 40 
+    </a>
+  </div>
 
-<div style="text-align: center; margin: 30px 0;">
-  <a href="zines/BB_41_48.pdf" target="_blank" style="
-    display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px 30px;
-    font-family: sans-serif;
-    font-size: 56px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  ">
-    view pg's 41 - 48
-  </a>
-</div>
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="zines/BB_41_48.pdf" target="_blank" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 15px 30px; font-family: sans-serif; font-size: 56px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      view pg's 41 - 48
+    </a>
+  </div>
+
+  <script>
+    function toggleMenu(button) {
+      button.classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
   
 </body>
 
