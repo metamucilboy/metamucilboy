@@ -126,12 +126,13 @@
   </div>
 
   <script>
-    function toggleMenu() {
-      var menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("show");
+    function toggleMenu(button) {
+      button.classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
     }
   </script>
 
 </body>
 
 </html>
+
