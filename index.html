@@ -1,130 +1,40 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INFO</title>
-
+  <title>Metamucil Boy</title>
   <style>
     body {
-      background-color: black;
-      color: white;
-      font-family: "Times New Roman", serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    .menu-button {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 100;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 10px;
-    }
-
-    .bar {
-      display: block;
-      width: 30px;
-      height: 3px;
-      margin: 6px 0;
       background-color: white;
-      transition: 0.4s;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: "Times New Roman", serif;
     }
-
-    .menu-panel {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 280px;
-      height: 100%;
-      background-color: #111;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-      transition: 0.4s;
-      z-index: 99;
-      padding-top: 80px;
+    .landing-image {
+      max-width: 90%;
+      height: auto;
+      margin-bottom: 20px;
     }
-
-    .menu-panel.open {
-      right: 0;
-    }
-
-    .menu-panel a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      padding: 15px 25px;
-      border-bottom: 1px solid #222;
-    }
-
-    .content {
-      margin-top: 60px;
-      max-width: 600px;
-    }
-
-    .content p {
-      font-size: 24px;
-      line-height: 1.6;
-      margin-bottom: 25px;
-    }
-
-    .open .bar:nth-child(1) {
-      transform: rotate(-45deg) translate(-6px, 6px);
-    }
-
-    .open .bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .open .bar:nth-child(3) {
-      transform: rotate(45deg) translate(-6px, -6px);
+    .enter-link {
+      font-size: 28px;
+      font-weight: bold;
+      color: black;
+      text-decoration: underline;
+      letter-spacing: 2px;
     }
   </style>
 </head>
-
 <body>
 
-  <button class="menu-button" onclick="toggleMenu(this)">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
+  <img src="landing.jpg" alt="Metamucil Boy Landing Image" class="landing-image">
 
-  <div class="menu-panel" id="mobileMenu">
-    <a href="info.html">HOME</a>
-    <a href="bottomless.html">BOTTOMLESS BOULEVARD</a>
-    <a href="god-devil.html">GOD the DEVIL and YOU</a>
-    <a href="(in circulation)/">(in circulation)</a>
-  </div>
-
-  <div class="content">
-    <h1 style="font-size: 36px; font-weight: bold; margin: 0 0 20px 0; color: white;">METAMUCIL BOY</h1>
-    <p>I have high cholesterol, so I drink a lot of Metamucil.</p>
-    <p>I live in South Eastern Massachusetts.</p>
-    <p>I like to draw.</p>
-    <p>Here's a website where you can view my drawings on your cell phone.</p>
-    
-    <p>Thanks,</p>
-    <p>Jonathan Loja</p>
-    <p>
-    <br>
-    email: metamucilboy@metamucilboy.com
-    </p>
-    
-  </div>
-
-  <script>
-    function toggleMenu(button) {
-      button.classList.toggle('open');
-      document.getElementById('mobileMenu').classList.toggle('open');
-    }
-  </script>
+  <a href="info.html" class="enter-link">ENTER</a>
 
 </body>
-
 </html>
